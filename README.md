@@ -1,4 +1,4 @@
-## 🚀 Description
+## Description
 Java Spring Boot API that returns:
 1. The 5 heaviest Pokémon.
 2. The 5 tallest Pokémon.
@@ -6,7 +6,7 @@ Java Spring Boot API that returns:
 
 Data source: [PokéAPI](https://pokeapi.co/api/v2/).
 
-## ⚙️ Technologies
+## Technologies
 - Java 17
 - Spring Boot 3
 - WebFlux (WebClient)
@@ -15,30 +15,30 @@ Data source: [PokéAPI](https://pokeapi.co/api/v2/).
 - JaCoCo (coverage)
 - Docker
 
-## 🐳 Run with Docker
+## Run with Docker
 
-### #️⃣ Build the image
+### Build the image
 ```bash
 mvn clean package -DskipTests
 docker build -t alea-pokemon-api .
 ```
 
-### 2️⃣ Run the container
+### Run the container
 ```bash
 docker run -p 8080:8080 alea-pokemon-api
 ```
 
-### 3️⃣ Test the endpoints
+### Test the endpoints
 ```bash
 curl http://localhost:8080/api/pokemons/heaviest
 curl http://localhost:8080/api/pokemons/tallest
 curl http://localhost:8080/api/pokemons/experienced
 ```
 
-## 🧠 Cache
+## Cache
 - Implemented with Caffeine (spring.cache.caffeine.spec=maximumSize=100,expireAfterWrite=10m)
 - Reduces repetitive calls to PokéAPI.
 
-## 🧪 Integration Testing
+## Integration Testing
 - Simulates PokéAPI using WireMock.
 - Verifies that the endpoints respond correctly.
